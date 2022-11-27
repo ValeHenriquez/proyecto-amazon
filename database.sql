@@ -41,3 +41,6 @@ create table review(
 	review_body text,
 	review_date date references "time"("date")
 );
+
+Gift_card
+gift card
