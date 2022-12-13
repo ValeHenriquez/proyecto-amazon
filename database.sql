@@ -10,7 +10,10 @@ create table customer(
 
 create table "time"(
 	
-	"date" date primary key
+	"date" date primary key,
+	"year" int,
+	"month" int,
+	"day" int
 );
 
 create table category(
