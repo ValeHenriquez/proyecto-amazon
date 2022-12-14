@@ -29,17 +29,14 @@ create table product(
 
 );
 
-
-
-
 create table review(
 	marketplace text,
 	customer_id text references customer(customer_id),
 	review_id text primary key,
 	product_id text references product(product_id),
-	star_rating int,
-	helpful_votes int,
-	total_votes int,
+	star_rating real,
+	helpful_votes real,
+	total_votes real,
 	vine text,
 	verified_purchase text,
 	review_headline text,
@@ -47,3 +44,6 @@ create table review(
 	review_date date references "time"("date")
 );
 
+
+copy product from 'C:\Users\Public\Documents\product.csv' delimiter ';';
+copy review from 'C:\Users\Public\Documents\review.csv' delimiter ';';
